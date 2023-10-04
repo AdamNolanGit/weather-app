@@ -9,4 +9,6 @@ public interface SensorService {
     Sensor getSensorById(long sensorId);
 
     List<Sensor> setupSensorData(String sensors);
+
+    Sensor querySensorData(String sensorName, List<String> metricsString, String statistic, String startDate, String endDate);
 }

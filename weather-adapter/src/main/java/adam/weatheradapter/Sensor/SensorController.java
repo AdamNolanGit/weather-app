@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -19,6 +20,11 @@ public class SensorController {
 	@Autowired
 	SensorService sensorService;
 
+	/**
+	 * Receives the sensor data from an API call, then stores in H2 database.
+	 * 
+	 * @return List of the saved Sensors
+	 */
     @GetMapping(value = "/getSensorData")
 	public List<Sensor> getSensorData() {
 		String uri = "http://127.0.0.1:3000/sensors";
@@ -28,25 +34,48 @@ public class SensorController {
 		return output;
 	}
 
+	/**
+	 * Creates a single sensor.
+	 * 
+	 * @param sensor Sensor to be created.
+	 * @return Returns the sensor if successful.
+	 */
 	@PostMapping("/createSensorData")
     public Sensor createSensorData(@RequestBody Sensor sensor) {
 		sensorService.createSensor(sensor);
         return sensor;
     }
 
+	/**
+	 * Returns the sensor with the given ID.
+	 * 
+	 * @param id Sensor ID.
+	 * @return	Sensor mathcing the ID.
+	 */
 	@GetMapping("/sensors/{id}")
     public ResponseEntity < Sensor > getProductById(@PathVariable long id) {
         return ResponseEntity.ok().body(sensorService.getSensorById(id));
     }
 
-	// @GetMapping("/{sensorId}/query")
-	// public List<Sensor> querySensorMetrics(
-	// 	@PathVariable String sensorId,
-	// 	@RequestParam List<String> metricTypes,
-	// 	@RequestParam String statistic,
-	// 	@RequestParam(required = false) LocalDate startDate,
-	// 	@RequestParam(required = false) LocalDate endDate) {
-	// return sensorService.getSensorData(sensorId, metricTypes, statistic, startDate, endDate);
-	// 	}
+	/**
+	 * Queries the saved sensors with given parameters, and returns results as a Sensor object.
+	 * 
+	 * @param sensorName Name of the sensor.
+	 * @param metrics Metrics to use.
+	 * @param statistic Statistic to use: min, max, sum, average.
+	 * @param startDate Optional start date.
+	 * @param endDate Optional end date.
+	 * @return Sensor object mathching the given parameters.
+	 */
+	@GetMapping("/query/{sensorName}")
+	public Sensor querySensorData(
+		@PathVariable String sensorName,
+		@RequestParam(value="metrics") List<String> metrics,
+		@RequestParam String statistic,
+		@RequestParam(required = false) String startDate,
+        @RequestParam(required = false) String endDate) {
+
+		return sensorService.querySensorData(sensorName, metrics, statistic, startDate, endDate);
+	}
     
 }
