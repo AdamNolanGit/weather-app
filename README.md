@@ -36,10 +36,10 @@ The application has several APIs that can be called:
 /query/{sensorName}     -   Queries the sensors with the following parameters: systemName, metrics, statistic, startDate, endDate. The startDate and endData are optional.
                             The queries are passed in the url, here are two example calls:
 
-                            http://localhost:8080/query/London?metrics=temperature&statistic=max
-                            - Gets the maximum of the metrics for the Sensor with the systemName London.
+            http://localhost:8080/query/London?metrics=temperature&statistic=max
+            - Gets the maximum of the metrics for the Sensor with the systemName London.
 
 
-                            http://localhost:8080/query/London?metrics=temperature&statistic=average&startDate=2022-09-28T08:00:00&endDate=2024-09-28T08:00:00
-                            - Gets the average of the metrics for the Sensor with the systemName London between the given dates.
+            http://localhost:8080/query/London?metrics=temperature&statistic=average&startDate=2022-09-28T08:00:00&endDate=2024-09-28T08:00:00
+            - Gets the average of the metrics for the Sensor with the systemName London between the given dates.
 
