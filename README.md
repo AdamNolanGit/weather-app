@@ -4,7 +4,7 @@ This application consists of 2 parts, the first is the sensor-provider which con
 To get the json-server running:
 
     - $ npm install -g json-server
-    - $ json-server --watch db.json
+    - $ json-server --host 127.0.0.1 --watch db.json 
 
 The following HTTP endpoints are created automatically by json-server:
 

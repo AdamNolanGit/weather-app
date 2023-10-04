@@ -2,90 +2,79 @@
     "sensors": [
         {
             "sensorId": 1,
-            "metrics": [
-                {
-                    "timestamp": "2023-09-28T08:00:00",
-                    "temperature": 25.5,
-                    "humidity": 60.2,
-                    "windSpeed": 15.3
-                },
-                {
-                    "timestamp": "2023-09-28T08:15:00",
-                    "temperature": 25.9,
-                    "humidity": 61.5,
-                    "windSpeed": 14.8
-                },
-                {
-                    "timestamp": "2023-09-28T08:30:00",
-                    "temperature": 26.3,
-                    "humidity": 59.8,
-                    "windSpeed": 16.1
-                },
-                {
-                    "timestamp": "2023-09-28T08:45:00",
-                    "temperature": 26.8,
-                    "humidity": 58.7,
-                    "windSpeed": 17.2
-                }
-            ]
+            "timestamp": "2023-09-28T08:15:00",
+            "temperature": 25.9,
+            "humidity": 61.5,
+            "windspeed": 14.8
+        },
+        {
+            "sensorId": 1,
+            "timestamp": "2023-09-28T08:30:00",
+            "temperature": 26.3,
+            "humidity": 59.8,
+            "windspeed": 16.1
+        },
+        {
+            "timestamp": "2023-09-28T08:45:00",
+            "temperature": 26.8,
+            "humidity": 58.7,
+            "windspeed": 17.2
         },
         {
             "sensorId": 2,
-            "metrics": [
-                {
-                    "timestamp": "2023-09-28T08:00:00",
-                    "temperature": 21.0,
-                    "humidity": 55.0,
-                    "windSpeed": 8.1
-                },
-                {
-                    "timestamp": "2023-09-28T08:15:00",
-                    "temperature": 22.1,
-                    "humidity": 61.5,
-                    "windSpeed": 7.9
-                },
-                {
-                    "timestamp": "2023-09-28T08:30:00",
-                    "temperature": 19.8,
-                    "humidity": 51.4,
-                    "windSpeed": 5.8
-                },
-                {
-                    "timestamp": "2023-09-28T08:45:00",
-                    "temperature": 20.9,
-                    "humidity": 49.2,
-                    "windSpeed": 12.3
-                }
-            ]
+            "timestamp": "2023-09-28T08:00:00",
+            "temperature": 21.0,
+            "humidity": 55.0,
+            "windspeed": 8.1
+        },
+        {
+            "sensorId": 2,
+            "timestamp": "2023-09-28T08:15:00",
+            "temperature": 22.1,
+            "humidity": 61.5,
+            "windspeed": 7.9
+        },
+        {
+            "sensorId": 2,
+            "timestamp": "2023-09-28T08:30:00",
+            "temperature": 19.8,
+            "humidity": 51.4,
+            "windspeed": 5.8
+        },
+        {
+            "sensorId": 2,
+            "timestamp": "2023-09-28T08:45:00",
+            "temperature": 20.9,
+            "humidity": 49.2,
+            "windspeed": 12.3
         },
         {
             "sensorId": 3,
-            "metrics": [
-                {
-                    "timestamp": "2023-09-28T08:00:00",
-                    "temperature": 9.8,
-                    "humidity": 80.5,
-                    "windSpeed": 18.1
-                },
-                {
-                    "timestamp": "2023-09-28T08:15:00",
-                    "temperature": 10.1,
-                    "humidity": 81.1,
-                    "windSpeed": 19.0
-                },
-                {
-                    "timestamp": "2023-09-28T08:30:00",
-                    "temperature": 12.5,
-                    "humidity": 84.7,
-                    "windSpeed": 18.9
-                },
-                {
-                    "timestamp": "2023-09-28T08:45:00",
-                    "temperature": 13.8,
-                    "humidity": 82.9,
-                    "windSpeed": 20.5
-                }
-            ]
+            "timestamp": "2023-09-28T08:00:00",
+            "temperature": 9.8,
+            "humidity": 80.5,
+            "windspeed": 18.1
+        },
+        {
+            "sensorId": 3,
+            "timestamp": "2023-09-28T08:15:00",
+            "temperature": 10.1,
+            "humidity": 81.1,
+            "windspeed": 19.0
+        },
+        {
+            "sensorId": 3,
+            "timestamp": "2023-09-28T08:30:00",
+            "temperature": 12.5,
+            "humidity": 84.7,
+            "windspeed": 18.9
+        },
+        {
+            "sensorId": 3,
+            "timestamp": "2023-09-28T08:45:00",
+            "temperature": 13.8,
+            "humidity": 82.9,
+            "windspeed": 20.5
         }
     ]
 }
