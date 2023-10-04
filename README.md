@@ -8,12 +8,12 @@ To get the json-server running:
 
 The following HTTP endpoints are created automatically by json-server:
 
-GET    /sensors
-GET    /sensors/{id}
-POST   /sensors
-PUT    /sensors/{id}
-PATCH  /sensors/{id}
-DELETE /sensors/{id}
+GET    /sensors  
+GET    /sensors/{id}  
+POST   /sensors  
+PUT    /sensors/{id}  
+PATCH  /sensors/{id}  
+DELETE /sensors/{id}  
 
 When you make POST, PUT, PATCH or DELETE requests, changes will be saved to db.json. A POST, PUT or PATCH request include a content-type: application/json header to use the JSON in the request body.
 
